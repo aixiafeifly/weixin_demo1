@@ -1,0 +1,4 @@
+<!--pages/home/home.wxml-->
+<text class='title'>首页</text>
+<button size='mini'>按钮</button>
+<view>知识1</view>
