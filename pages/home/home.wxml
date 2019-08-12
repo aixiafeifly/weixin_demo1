@@ -2,3 +2,5 @@
 <text class='title'>首页</text>
 <button size='mini'>按钮</button>
 <view>知识1</view>
+<view>知识点1</view>
+<cover-view>这是真么</cover-view>
