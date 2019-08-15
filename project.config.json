@@ -4,12 +4,13 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
-		"autoAudits": false
+		"autoAudits": false,
+		"checkInvalidKey": true
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.8.0",
@@ -39,23 +40,8 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
-			"list": [
-				{
-					"id": -1,
-					"name": "首页",
-					"pathName": "pages/home/home",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "首页",
-					"pathName": "pages/home/home",
-					"query": "name=\"JOIN\"",
-					"scene": 1006
-				}
-			]
+			"current": -1,
+			"list": []
 		}
 	}
 }

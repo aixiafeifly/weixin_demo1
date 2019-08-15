@@ -1,13 +1,6 @@
 <!--pages/home/home.wxml-->
 <text class='title'>首页</text>
-<button size='mini'>按钮</button>
-<view>内容</view>
-<view>{{msg}}</view>
-<!-- 循环  使用{{数组}}这里内置有一个item-->
-<view wx:for="{{list}}" wx:key="key"  wx:for-item='list'>我的名字:{{item.name}}</view>
-<!-- 事件监听 绑定事件必须使用bindtap -->
-<view>计算:
-<button size='mini' bindtap='handAdd'>+</button>
-  {{counter}}
-<button size='mini' type='primary' bindtap='handReduce'>-</button>
-</view>
+<button bindgetuserinfo='handleGetUserInfo' size='mini' open-type='getUserInfo'>获取授权</button>
+<open-data type="userNickName"></open-data>
+<open-data type="userAvatarUrl"></open-data>
+<view wx:for="{{list}}">{{item.title}}</view>
