@@ -1,0 +1,57 @@
+var foo = "'hello world' from comm.wxs";
+var bar = function (d) {
+  return d;
+}
+//价格格式化
+function priceFormat(price, number) {
+  var number = number || 2
+  console.log('-------------------------')
+  return parseFloat(price).toFixed(number)
+}
+//时间格式化
+function dataFormat(timestamp,format){
+  console.log(format)
+  if (typeof format === "undefined" || format == null || format.trim() == "") {
+      return
+  }
+  format = "YY-MM-DD hh:mm-ss"
+  timestamp = parseInt(timestamp)
+  var realDate = getDate(timestamp)
+  function timeFormat(num){  //只有一位的时候补0
+    return num <10 ? '0'+num:num
+  }
+  var data=[
+    ['M+',timeFormat(realDate.getMonth() + 1) ],
+    ['d+', timeFormat(realDate.getDate())],
+    ['h+', timeFormat(realDate.getHours())],
+    ['m+', timeFormat(realDate.getMinutes())],
+    ['s+', timeFormat(realDate.getSeconds())],
+    ['q+', Math.floor((realDate.getMonth() + 3)/3)],
+    ['S+', realDate.getMilliseconds()],
+  ]
+  var regYear=getRegExp("(y+)","i");
+  var regl = regYear.exec(format)
+  console.log(regl,'----------------')
+  if(regl){
+    format = format.replace(regl[1], (realDate.getFullYear() + '').substring(4 - regl[1].length))
+    console.log(format,'------')
+  }
+  for(var i =0;i<data.length;i++){
+    var k=data[i][0]
+    var v=data[i][1]
+    var reg2 = getRegExp("(" + k + ")").exec(format)
+    if (reg2) {
+      format = format.replace(reg2[1], reg2[1].length == 1 ? v : ("00" + v).substring(("" + v).length))
+    }
+  }
+  
+  return format; 
+}
+module.exports = {
+  foo: foo,
+  bar: bar,
+  priceFormat: priceFormat,
+  dataFormat: dataFormat
+};
+
+

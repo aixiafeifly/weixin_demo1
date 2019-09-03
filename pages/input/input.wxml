@@ -1,0 +1,9 @@
+<!--pages/input/input.wxml-->
+<view>
+ <input focus="{{true}}" />
+ <input class="{{select? 'borderYellow':' borderRed'}}" bindinput="handInput" bindfocus="handFocus" bindblur="handBlur"/>
+</view>
+<view>
+  <input value='{{inputData}}' bindinput='inputmodle' />双向数据绑定
+</view>
+<block>{{inputData}}-----</block>

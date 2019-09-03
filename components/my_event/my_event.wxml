@@ -1,0 +1,2 @@
+<!--components/my_event/my_event.wxml-->
+<button class="button" size='mini' bindtap="onTap">注册</button>

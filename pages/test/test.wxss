@@ -1,0 +1,9 @@
+/* pages/test/test.wxss */
+.box_view{
+  width: 25%;
+  height: 100px;
+  background-color: red;
+}
+.hover_view{
+  background-color: yellow;
+}

@@ -1,0 +1,9 @@
+<!--pages/scroll-view/scroll-view.wxml-->
+<text>pages/scroll-view/scroll-view.wxml</text>
+<!-- 滚动 -->
+<scroll-view class='scroll_container1' scroll-x>
+  <view wx:for="{{10}}" class='item'>{{item+1}}</view>
+</scroll-view>
+<scroll-view class='scroll_container2' scroll-y  scroll-top="{{20}}" bindscroll="handScroll">
+  <view wx:for="{{10}}" class='item'>{{item+1}}</view>
+</scroll-view>

@@ -1,6 +1,11 @@
 {
   "pages": [
     "pages/home/home",
+    "pages/wxs/wxs",
+    "pages/scroll-view/scroll-view",
+    "pages/input/input",
+    "pages/test/test",
+
     "pages/category/category",
     "pages/cart/cart",
     "pages/profile/profile"

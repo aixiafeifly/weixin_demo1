@@ -1,0 +1,7 @@
+<!--components/my_cpn/my_cpn.wxml-->
+<text class='title'>组件开发</text>
+<view>{{msg}}</view>
+<block>
+<view>我是自定义组件</view>
+</block>
+

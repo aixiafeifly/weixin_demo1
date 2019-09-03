@@ -8,17 +8,47 @@ Page({
    * 页面的初始数据
    */
   data: {
-    list:[]
+    list:[],
+    contNum:0,
+    tabList:[
+      "流行",
+      "潮流",
+      "时尚",
+      "新款",
+      "经典"
+    ]
   },
   handleGetUserInfo(event){
     console.log(event,'拿到授权信息')
     console.log(event.detail)
    
   },
+  myevent(e){
+    console.log(e)
+  },
+  tabEvent:(e)=>{
+    console.log(e)
+    var index = e.detail
+    console.log("tabEnvent", )
+  },
+  handlesel(){
+    //修改组件内部数据
+    const mysel=this.selectComponent("#mysel")
+    const setNum = mysel.data.num + 1
+    mysel.setData({
+      num: setNum
+    })
+    this.setData({
+      contNum: setNum
+    })
+
+  },
   /**
    * 生命周期函数--监听页面加载
    */
+
   onLoad(options) {
+  
     console.log(options,'这里是拿到链接后面得参数')
      const that = this
     wx.request({
@@ -36,7 +66,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady() {
-    console.log("ready")
+    
   },
 
   /**

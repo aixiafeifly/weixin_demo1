@@ -1,0 +1,6 @@
+<include src="/wxml/footer.wxml" />
+<wxs src="../../wxs/comm.wxs" module="comm" />
+<view>{{comm.foo}}</view>
+<view>{{comm.bar("哈哈")}}</view>
+<view>{{comm.priceFormat(price,5)}}</view>
+<view>{{comm.dataFormat(timestamp,'yy-mm-dd')}}</view>

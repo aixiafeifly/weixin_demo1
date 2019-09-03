@@ -1,0 +1,12 @@
+/* pages/input/input.wxss */
+input{
+  margin: 10px;
+  border: 1px solid;
+  padding: 5px; 
+}
+.borderRed{
+  border-color:red; 
+}
+.borderYellow{
+  border-color: yellow;
+}

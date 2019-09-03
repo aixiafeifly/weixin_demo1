@@ -23,7 +23,7 @@ App({
 
     wx.getUserInfo({
       success: function (res) {
-        console.log(res)
+       // console.log(res)
       }
     })
   },

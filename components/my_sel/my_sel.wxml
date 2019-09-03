@@ -1,0 +1,2 @@
+<!--components/my_sel/my_sel.wxml-->
+<text>{{num}}</text>

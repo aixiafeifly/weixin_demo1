@@ -1,0 +1,21 @@
+<!--pages/test/test.wxml-->
+<text>pages/test/test.wxml\n</text>
+<text decode="{{false}}">选中选中选中选中选中选中选中选中选中选中选中选中 &gt;</text>
+<button size='mini' open-type='contact' bindcontact="handleContact">拿到会话</button>
+<button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" size='mini'>拿到用户手机号</button>
+<view class='box_view' hover-class="hover_view" hover-start-time="{{0}}" hover-stay-time="{{0}}">view组件</view>
+
+<swiper indicator-dots current="{{O}}"
+  autoplay interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="355" height="150"/>
+    </swiper-item>
+  </block>
+</swiper>
+<button type="primary" bindtap="handchooseImage">手机图片</button>  
+<block wx:for="{{chooseImage}}">
+  <image src='{{item}}'></image>
+</block>
+<image src='https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg' bindload='handbindload' lazy-load wx:for="{{10}}"    show-menu-by-longpress="{{true}}" mode="right" style="width: 200px; height: 200px; 
+/> 

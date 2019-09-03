@@ -1,0 +1,7 @@
+<!--components/my_slot/my_slot.wxml-->
+<text>slot头部组件</text>
+<view class='header'><slot name="header" /></view>
+<view class='cont1'><slot name="cont1"/></view>
+<view class='cont2'><slot/></view>
+<view class='footer'><slot name="footer"/></view>
+<text>slot尾部组件</text>

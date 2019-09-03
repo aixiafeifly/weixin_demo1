@@ -1,0 +1,8 @@
+
+  <view class="tab">
+    <block wx:for="{{titles}}" wx:key="*this">
+       <view class='tanItem {{tabIndex == index ? "active" : "" }}' data-index="{{index}}" bindtap='fnTab' >
+        {{item}}{{index}}
+      </view>
+    </block>
+  </view>

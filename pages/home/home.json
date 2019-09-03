@@ -1,6 +1,13 @@
 {
 
-  "usingComponents": {},
+  "usingComponents": {
+    "mycpn":"/components/my_cpn/my_cpn",
+    "myprop": "/components/my_prop/my_prop",
+    "myevent": "/components/my_event/my_event",
+    "mytab": "/components/my_tab_control/my_tab_control",
+    "mysel": "/components/my_sel/my_sel",
+    "myslot": "/components/my_slot/my_slot"
+  },
   "navigationBarTitleText": "首页",
   "navigationBarBackgroundColor":"#ADD8E6"
 }

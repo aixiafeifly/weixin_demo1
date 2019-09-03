@@ -1,0 +1,14 @@
+@import 'style/weui.wxss';
+.active{
+  background: red;
+}
+.footer{
+  height: 100rpx;
+  background-color: red;
+  text-align: center;
+}
+.header{
+  height: 100rpx;
+  background-color: peachpuff;
+  text-align: center;
+}

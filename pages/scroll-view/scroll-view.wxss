@@ -1,0 +1,15 @@
+/* pages/scroll-view/scroll-view.wxss */
+.scroll_container1{
+  white-space:nowrap;
+}
+.item{
+  height: 100px;
+  width: 100px;
+  background-color: yellowgreen;
+  margin: 20px;
+  display: inline-block;
+}
+.scroll_container2{
+  height: 300px;
+  overflow: hidden;
+}

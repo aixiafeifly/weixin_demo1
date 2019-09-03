@@ -1,6 +1,24 @@
 <!--pages/home/home.wxml-->
 <text class='title'>首页</text>
 <button bindgetuserinfo='handleGetUserInfo' size='mini' open-type='getUserInfo'>获取授权</button>
-<open-data type="userNickName"></open-data>
-<open-data type="userAvatarUrl"></open-data>
-<view wx:for="{{list}}">{{item.title}}</view>
+//<open-data type="userNickName"></open-data>
+//<open-data type="userAvatarUrl"></open-data>
+<mycpn/> <myprop title="我是传参值"/>
+<myprop/>
+<myevent bind:myevent="myevent"/>
+<mytab titles="{{tabList}}" bind:tabEvent="tabEvent" />
+<button size='mini' bind:tap="handlesel">修改组件内部的数据</button>
+<mysel id="mysel" />
+<view>______________________________________________________________________________</view>
+<block>
+<view wx:if="{{contNum%2>0}}">
+  <myslot>
+      <view slot="header">头部--------21E-----</view>
+      <view slot="cont1">内容------------------</view>
+      <view slot="footer">结尾--------12-----</view>
+  </myslot>
+ </view> 
+</block>
+
+<view>______________________________________________________________________________</view>
+<view wx:for="{{list}}" wx:key="">{{item.title}}</view>

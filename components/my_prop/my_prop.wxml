@@ -1,0 +1,2 @@
+<!--components/my_prop/my_prop.wxml-->
+<text>{{title}}</text>

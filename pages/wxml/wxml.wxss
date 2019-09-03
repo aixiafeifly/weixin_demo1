@@ -1,0 +1,6 @@
+/* pages/wxs/wxs.wxss */
+.rpx{
+  width: 100rpx;
+  height: 100rpx;
+  background-color: pink;
+}
