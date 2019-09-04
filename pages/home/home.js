@@ -1,7 +1,4 @@
-const appGlobel=getApp()
-console.log(appGlobel.globalData) 
-
-
+import request from '../../service/network.js'
 Page({
 
   /**
@@ -48,16 +45,41 @@ Page({
    */
 
   onLoad(options) {
-  
-    console.log(options,'这里是拿到链接后面得参数')
-     const that = this
+    this.getData()
+    request({
+      url:'recommend'
+    }).then(res=>{
+      console.log(res)
+    }).catch(err=>{
+      console.log(err)
+    })
+ 
+
+    
+  },
+  getData(){
+    //原始请求
+    const that = this
     wx.request({
       url: 'http://123.207.32.32:8000//api/v1/recommend', //仅为示例，并非真实的接口地址
-      success:function(res){   //这里必须是箭头函数 否则这里得this是找不到的，
+      success: function (res) {   //这里必须是箭头函数 否则这里得this是找不到的，
         const data = res.data.data.list
         that.setData({
-          list:data
+          list: data
         })
+      }
+    })
+
+    //带参数
+    wx.request({
+      url: 'http://www.httpbin.org/post',
+      method: "post",
+      data: {
+        name: 'join',
+        age: 1
+      },
+      success: (res) => {
+       // console.log(res)
       }
     })
   },

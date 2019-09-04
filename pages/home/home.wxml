@@ -1,8 +1,8 @@
 <!--pages/home/home.wxml-->
 <text class='title'>首页</text>
 <button bindgetuserinfo='handleGetUserInfo' size='mini' open-type='getUserInfo'>获取授权</button>
-//<open-data type="userNickName"></open-data>
-//<open-data type="userAvatarUrl"></open-data>
+<!-- <open-data type="userNickName"></open-data>
+<open-data type="userAvatarUrl"></open-data> -->
 <mycpn/> <myprop title="我是传参值"/>
 <myprop/>
 <myevent bind:myevent="myevent"/>
