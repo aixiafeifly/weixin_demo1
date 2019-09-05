@@ -3,8 +3,8 @@ import { baseURL, timeout} from './config.js'
    return new Promise((resolve,reject)=>{
      wx.request({
        url: baseURL + options.url,
-       timeout: timeout,
        method: options.method || 'get',
+       timeout: timeout,
        data: options.data || {},
        success: resolve ,
        fail: reject ,

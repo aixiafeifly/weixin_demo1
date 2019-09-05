@@ -61,7 +61,7 @@ Page({
     //原始请求
     const that = this
     wx.request({
-      url: 'http://123.207.32.32:8000//api/v1/recommend', //仅为示例，并非真实的接口地址
+      url: 'http://123.207.32.32:8000/api/v1/recommend', //仅为示例，并非真实的接口地址
       success: function (res) {   //这里必须是箭头函数 否则这里得this是找不到的，
         const data = res.data.data.list
         that.setData({
@@ -129,7 +129,61 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage() {
-    console.log('分享')
+  onShareAppMessage(res) {
+    console.log(res,'-----------------------')
+    return {
+      title: '你好啊。伊人',
+      path: '/page/cart/cart',
+      imageUrl:"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1567594503158&di=f12dff71ff3563604aa15b842d74349d&imgtype=0&src=http%3A%2F%2Fimg3.utuku.china.com%2F650x0%2Fent%2F20190820%2F52481b00-1bf2-487b-89be-01296479db36.jpg"
+    }
+  },
+  /**
+   * 弹窗
+   */
+  handToast(){
+    wx:wx.showToast({
+      title: '成功啦',
+      icon: 'success',
+      duration: 200000,
+      success: function(res) {
+        console.log(res,'handToast')
+      },
+      fail: function(res) {},
+      complete: function(res) {},
+    })
+  },
+  handmodal(){
+    wx.showModal({
+      title: '提示',
+      content: '这是一个模态弹窗',
+      success(res) {
+        if (res.confirm) {
+          console.log('用户点击确定')
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })
+  },
+  handloading(){
+    wx.showLoading({
+      title: '加载中',
+    })
+    setTimeout(function () {
+      wx.hideLoading()
+    }, 2000)
+  },
+  handactionSheet(){
+    wx.showActionSheet({
+      itemList: ['A', 'B', 'C'],
+      itemColor:"#FF0000",
+      success(res) {
+        console.log(res.tapIndex)
+      },
+      fail(res) {
+        console.log(res.errMsg)
+      }
+    })
   }
+
 })

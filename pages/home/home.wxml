@@ -22,3 +22,9 @@
 
 <view>______________________________________________________________________________</view>
 <view wx:for="{{list}}" wx:key="">{{item.title}}</view>
+<button bind:tap="handToast" size='mini'>Toast</button>
+<button bind:tap="handmodal" size='mini'>handmodal</button>
+<button bind:tap="handloading" size='mini'>handloading</button>
+<button bind:tap="handactionSheet" size='mini'>handactionSheet</button>
+
+<button open-type='share' size='mini'>分享</button>
