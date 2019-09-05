@@ -21,10 +21,16 @@
 </block>
 
 <view>______________________________________________________________________________</view>
-<view wx:for="{{list}}" wx:key="">{{item.title}}</view>
+<!-- <view wx:for="{{list}}" wx:key="">{{item.title}}</view> -->
 <button bind:tap="handToast" size='mini'>Toast</button>
 <button bind:tap="handmodal" size='mini'>handmodal</button>
 <button bind:tap="handloading" size='mini'>handloading</button>
 <button bind:tap="handactionSheet" size='mini'>handactionSheet</button>
 
 <button open-type='share' size='mini'>分享</button>
+<!-- 跳转 -->
+<navigator url='/pages/detail/detail'open-type="navigate">跳转detail</navigator>
+<navigator url='/pages/cart/cart'open-type="switchTab">跳转tabbar唯一个可以跳转的tabbar</navigator>
+<navigator url='/pages/detail/detail'open-type="reLaunch">跳转reLaunch 关闭所有包括返回</navigator>
+{{title}}
+<button size='mini' bind:tap="handDetail">事件跳转</button>

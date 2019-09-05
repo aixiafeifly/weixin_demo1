@@ -13,7 +13,8 @@ Page({
       "时尚",
       "新款",
       "经典"
-    ]
+    ],
+    title:"你好世界"
   },
   handleGetUserInfo(event){
     console.log(event,'拿到授权信息')
@@ -183,6 +184,11 @@ Page({
       fail(res) {
         console.log(res.errMsg)
       }
+    })
+  },
+  handDetail(){
+    wx.navigateTo({
+      url: '/pages/detail/detail?title=这都是什么事',
     })
   }
 

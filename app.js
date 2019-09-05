@@ -22,6 +22,7 @@ App({
     }
    
   },
+  //验证token
   check_token(token){
     console.log('执行验证-----------------')
     wx.request({
@@ -40,7 +41,6 @@ App({
           console.log()
         }
 
-        
         if (res.statusCode==200){
           console.log('验证成功')
         }else{
@@ -53,6 +53,7 @@ App({
       }
     })
   },
+  //登录
   login:function(){
     console.log('登录')
     const that=this

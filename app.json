@@ -5,10 +5,10 @@
     "pages/scroll-view/scroll-view",
     "pages/input/input",
     "pages/test/test",
-
     "pages/category/category",
     "pages/cart/cart",
-    "pages/profile/profile"
+    "pages/profile/profile",
+    "pages/detail/detail"
   ],
   "window": {
     "navigationBarBackgroundColor": "#FF8080",
